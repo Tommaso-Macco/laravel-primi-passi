@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.home');
 });
+
+Route::get('/header', function () {
+    $nameList = [
+        'name' => "Tommaso",
+        'lastname' => "Rossi",
+        'age' => "20",
+        'job' => "Studente"
+    ];
+    return view('header.header', $nameList);
+});
+
